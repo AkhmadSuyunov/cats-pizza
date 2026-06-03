@@ -13,9 +13,9 @@ test.describe('Orders', () => {
     await homePage.open();
     await homePage.addFirstCatToCart();
     await homePage.goToCheckoutFromCart();
-    await checkoutPage.signInInCheckout(testUsers.existing.email, testUsers.existing.password);
     await checkoutPage.fillAddress(testAddress);
     await checkoutPage.submit();
+    await checkoutPage.signInInCheckout(testUsers.existing.email, testUsers.existing.password);
     await ordersPage.openOrdersBtn();
     await ordersPage.assertHasOrder();
   });
