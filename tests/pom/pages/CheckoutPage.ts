@@ -18,9 +18,9 @@ export class CheckoutPage {
     apartment: string;
     comment: string;
   }) {
-    await this.page.getByLabel('Город*:').fill(address.city);
-    await this.page.getByLabel('Улица*:').fill(address.street);
-    await this.page.getByLabel('Дом*:').fill(address.house);
+    await this.page.getByLabel('Город').fill(address.city);
+    await this.page.getByLabel('Улица').fill(address.street);
+    await this.page.getByLabel('Дом').fill(address.house);
     await this.page.getByLabel('Квартира').fill(address.apartment);
     await this.page.getByLabel('Комментарий курьеру').fill(address.comment);
   }
