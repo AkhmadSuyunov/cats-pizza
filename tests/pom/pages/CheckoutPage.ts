@@ -27,7 +27,7 @@ export class CheckoutPage {
 
   async submit() {
     await this.page.getByTestId('approveOrder').click();
-    await expect(this.page.getByTestId('modalTitle')).toHaveText('Заказ оформлен');
+    await expect(this.page.getByTestId('modalTitle')).toHaveText('Оформление доставки');
     await this.page.getByTestId('closeSubmittedModalButton').click();
   }
 }
